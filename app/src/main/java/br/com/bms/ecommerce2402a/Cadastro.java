@@ -68,10 +68,29 @@ public class Cadastro extends AppCompatActivity {
             if(!email.isEmpty()){
                 if (!telefone.isEmpty()){
                     if(!senha.isEmpty()){
-                        //Se todos os campos estiverem
+                        //Se todos os campos estiverem preenchidos
+                        Usuario usuario = new Usuario();
+                        usuario.setNome(nome);
+                        usuario.setEmail(email);
+                        usuario.setTelefone(telefone);
+                        usuario.setSenha(senha);
+                        //Chama o método para cadastrar no Firebase
+                        gerar_Cadastro(usuario);
+                    }else {
+                        editSenhaCadastro.requestFocus();
+                        editSenhaCadastro.setError("Preencha sua senha");
                     }
+                }else {
+                    editTelefoneCadastro.requestFocus();
+                    editTelefoneCadastro.setError("Preencha seu telefone");
                 }
+            }else {
+                editEmailCadastro.requestFocus();
+                editEmailCadastro.setError("Preencha seu email");
             }
+        }else{
+            editNomeCadastro.requestFocus();
+            editNomeCadastro.setError("Preencha seu nome");
         }
     }
 }
