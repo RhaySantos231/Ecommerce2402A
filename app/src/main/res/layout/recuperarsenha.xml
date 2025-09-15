@@ -71,6 +71,7 @@
         android:layout_height="58dp"
         android:layout_marginTop="518dp"
         android:backgroundTint="#0843f6"
+        android:onClick="validar_dados_RS"
         android:text="Recuperar email"
         android:textColor="#fff"
         android:textSize="14sp"
