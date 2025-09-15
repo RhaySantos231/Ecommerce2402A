@@ -2,6 +2,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import br.com.bms.ecommerce2402a.R;
 
 public class MainActivity extends AppCompatActivity {
