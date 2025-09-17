@@ -3,12 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".perfil">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".perfil"
+   >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:padding="10dp">
+       <androidx.cardview.widget.CardView
+           android:layout_width="150dp"
+           android:layout_height="150dp"
+           app:cardCornerRadius="100dp"
+           android:layout_marginStart="120dp"
+           android:layout_marginTop="20dp">
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/imgPerfil"
+               android:src="@drawable/bg_edit"/>
+       </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:id="@+id/nomeUser"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_edit"
+            android:text="Bio:"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:id="@+id/BioUser"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+           android:gravity="center_vertical"
+           android:orientation="horizontal"
+           android:layout_marginTop="20dp">
+           <ImageView
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:src="@drawable/ic_favorito_off"
+               android:scaleType="centerInside"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Meus Favoritos"
+               android:textStyle="bold"/>
+           <ImageButton
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:background="@drawable/ic_seta_esquerda"
+               android:rotation="180"
+               android:padding="20sp"
+               android:layout_marginStart="175dp" />
+       </LinearLayout>
+   </LinearLayout>
 </FrameLayout>
